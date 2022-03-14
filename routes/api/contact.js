@@ -53,8 +53,8 @@ router.post(
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-
     try {
+      const { firstName, lastName, email, message } = req.body;
       const contact = new Contact({
         firstName,
         lastName,

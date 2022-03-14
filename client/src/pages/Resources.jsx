@@ -1,9 +1,10 @@
-import React from "react";
-import Questions from "../components/resources/Questions";
-import { useLocation } from "react-router-dom";
+import React, { useEffect } from 'react';
+import Questions from '../components/resources/Questions';
+import { useLocation } from 'react-router-dom';
+
 const Resources = ({ setGetlocation }) => {
   const location = useLocation();
-  React.useEffect(() => {
+  useEffect(() => {
     setGetlocation(location.pathname);
   }, []);
   return (

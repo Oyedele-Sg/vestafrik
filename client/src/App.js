@@ -36,11 +36,11 @@ const App = () => {
             exact
             element={<Works setGetlocation={setGetlocation} />}
           />
-          <Route
+          {/* <Route
             path="resources"
             exact
             element={<Resources setGetlocation={setGetlocation} />}
-          />
+          /> */}
           <Route
             path="process"
             exact

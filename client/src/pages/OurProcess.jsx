@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ship from '../assets/images/ship.png';
 import dot from '../assets/images/dot.png';
 import photo from '../assets/images/Photo.png';
 import bg from '../assets/images/BG.png';
 import { useLocation } from 'react-router-dom';
+
 const OurProcess = ({ setGetlocation }) => {
   const location = useLocation();
-  React.useEffect(() => {
+  useEffect(() => {
     setGetlocation(location.pathname);
   }, []);
 
@@ -33,8 +34,8 @@ const OurProcess = ({ setGetlocation }) => {
             <div className=" w-full flex items-center flex-col justify-center">
               <h1 className=" build_text  text-font">This is how we work</h1>
               <p className=" w-2/3 text-center p_text text-font_sm pt-2">
-                Lorem ipsum is common placeholder text used to demonstrate the
-                graphic elements of a document or visual presentation.{' '}
+                Innovation, Partnerships, Integrity, Entrepreneurship, Teamwork
+                are what drives us.{' '}
               </p>
             </div>
             <div className=" w-full mt-12 grid bg-white grid-cols-1 lg:grid-cols-3 gap-12 bg_grid relative">
@@ -43,11 +44,10 @@ const OurProcess = ({ setGetlocation }) => {
                   Account Creation
                 </h6>
                 <p className="text-sm text-font_sm pt-1 w-full text-center">
-                  The buyer is required to create an account with VestAfrik to
-                  be eligible to buy properties on the marketplace. This process
-                  includes registration with basic user information such as
-                  Fullname, Email, Password, Date of Birth, Profile Picture, and
-                  Address.
+                  As an investor, you'll be required to create an account with
+                  VestAfrik to be eligible to buy/invest in properties on our
+                  marketplace. This process includes registration with basic
+                  biometric information and national identification.
                 </p>
                 <div
                   style={{ top: '-15px' }}
@@ -61,13 +61,10 @@ const OurProcess = ({ setGetlocation }) => {
                   Account Verification
                 </h6>
                 <p className="text-sm text-font_sm pt-1 w-full text-center">
-                  To ensure validity, users will be required to submit documents
-                  for KYC verification purposes. This may include government ID,
-                  proof of residency/address, and many more. During this
-                  process, the seller will also be required to add his/her
-                  banking information to receive payment for any sales made.
-                  Once the account is verified, the user is then allowed to post
-                  properties for sale.
+                  To ensure validity, a KYC verification is conducted on every
+                  new account. During this process, additional information such
+                  as BVN maybe required. An investor would not be able to make
+                  any investment with an unverified account.
                 </p>
                 <div
                   style={{ top: '-25px' }}
@@ -81,10 +78,10 @@ const OurProcess = ({ setGetlocation }) => {
                   Making An Offer
                 </h6>
                 <p className="text-sm text-font_sm pt-1 w-full text-center">
-                  When the buyer finds a property of interest, the buyer is able
-                  to make an offer on the property. The buyer will state the
-                  maximum offer price. The buyer then waits for the offer to be
-                  approved, denied, or countered.
+                  Depending on the investment type, you might be able to make an
+                  offer which could be accepted, countered, or denied. For other
+                  investment types, you are able to choose either paying in full
+                  or going with an agreed payment plan.
                 </p>
                 <div
                   style={{ top: '-20px' }}
@@ -95,16 +92,13 @@ const OurProcess = ({ setGetlocation }) => {
               </div>
               <div className=" relative z-50 flex flex-col gap-1 items-center justify-center">
                 <h6 className="text-font font-bold relative n_text z-50">
-                  Agreement
+                  Payment
                 </h6>
                 <p className="text-sm text-font_sm pt-1 w-full text-center">
-                  If the buyer’s offer is accepted, the buyer enters into a
-                  contract of agreement that binds the buyer to purchasing the
-                  property. Part of this would require the buyer to pay an
-                  agreed down-payment which will be x% of the property cost.
-                  This agreement would also include a sales statement, terms and
-                  conditions regarding how long the buyer has to make full
-                  payment, legal documents to be provided, fees, and many more.
+                  Once your offer has been accepted or you're ready to make a
+                  full payment or agreed to a short-term time-to-own payment
+                  conditions, you are able to choose any of our instant payment
+                  methods to purchase your investment.
                 </p>
                 <div
                   style={{ top: '-20px' }}
@@ -115,16 +109,13 @@ const OurProcess = ({ setGetlocation }) => {
               </div>
               <div className=" relative z-50 flex flex-col gap-1 items-center justify-center">
                 <h6 className="text-font n_text font-bold relative z-50">
-                  Payment & Issuance of Document
+                  Legal & Documents
                 </h6>
                 <p className="text-sm text-font_sm pt-1 w-full text-center">
-                  Once the buyer reviews and agrees to the document, the buyer
-                  funds his/her VestAfrik wallet and makes the required payments
-                  at the required times. Once the payments have been made, all
-                  legal documents, receipts, copies of contract and agreement,
-                  and other bindings would be remitted to the buyer. These
-                  documents make the buyer the legal and authoritative owner of
-                  the property.
+                  Once the payments have been made, all legal documents,
+                  receipts, copies of contract and agreement, and other bindings
+                  that makes you a legal and authoritative owner of the
+                  investment would be remitted to the investor's portal.
                 </p>
                 <div
                   style={{ top: '-20px' }}
@@ -135,15 +126,13 @@ const OurProcess = ({ setGetlocation }) => {
               </div>
               <div className=" relative z-50 flex flex-col gap-1 items-center justify-center">
                 <h6 className="text-font font-bold n_text relative z-50">
-                  Close
+                  Closing
                 </h6>
                 <p className="text-sm text-font_sm pt-1 w-full text-center">
-                  At the closing of the property, the buyer can either opt to
-                  keep the property in his/her VestAfrik portfolio for the
-                  purpose of flipping or resale in the future or have the
-                  property completely taken out of the VestAfrik’s platform. If
-                  the buyer wants to resell the property at a later time, the
-                  buyer would have to go through all the seller’s processes.
+                  At the closing of the investment transaction when other steps
+                  such as land surveying, physical signing of documents,and more
+                  have been completed, hardcopies of your legal rights to the
+                  investment would be given to you.
                 </p>
                 <div
                   style={{ top: '-20px' }}
@@ -167,12 +156,12 @@ const OurProcess = ({ setGetlocation }) => {
                   There is no better time to start investing in real estate and
                   no better place to invest
                 </h1>
-                <button
+                {/* <button
                   className="button_padding2 font-medium text-sm bg-white mt-3"
                   style={{ color: '#FFCE00' }}
                 >
                   Get Started
-                </button>
+                </button> */}
               </div>
               <div className=" relative">
                 <img src={photo} alt="" />

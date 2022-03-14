@@ -128,15 +128,15 @@ const Footer = () => {
       >
         <div className="container">
           <div className="flex items-center justify-between text-gray-400 text-xs">
-            <p>© 2020 Landify UI Kit. All rights reserved</p>
+            <p>© 2022 VestAfrik. All rights reserved</p>
             <div className="flex items-center gap-4">
-              <a href="#">
+              <a href="https://www.instagram.com/vestafrik/">
                 <FiInstagram className="w-4 h-4" />
               </a>
-              <a href="#">
+              <a href="https://twitter.com/vestafrik/">
                 <AiOutlineTwitter className="w-4 h-4" />
               </a>
-              <a href="#">
+              <a href="https://www.youtube.com/channel/UCeZtgzPxa599nAfRyiXvjxQ">
                 <AiFillYoutube className="w-4 h-4" />
               </a>
             </div>

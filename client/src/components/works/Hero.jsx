@@ -14,9 +14,9 @@ const Hero = () => {
               <div className="flex items-center justify-center w-full">
                 <p className=" text-font_sm n_text text-center w-2/3 pt-3">
                   We blend our investment expertise with smart technology to
-                  provide our 170,000 investors with the buying power and
-                  investment opportunities traditionally reserved for billion
-                  dollar institutions.
+                  provide our investors with the buying power and investment
+                  opportunities traditionally reserved for billion dollar
+                  institutions.
                 </p>
               </div>
             </div>
@@ -27,9 +27,9 @@ const Hero = () => {
               <div className="flex items-center justify-center w-full">
                 <p className=" text-font_sm text-sm text-center w-full pt-3">
                   We blend our investment expertise with smart technology to
-                  provide our 170,000 investors with the buying power and
-                  investment opportunities traditionally reserved for billion
-                  dollar institutions.
+                  provide our investors with the buying power and investment
+                  opportunities traditionally reserved for billion dollar
+                  institutions.
                 </p>
               </div>
             </div>

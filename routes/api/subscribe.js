@@ -50,6 +50,7 @@ router.post(
     }
 
     try {
+      const { email } = req.body;
       const emailExists = await Subscribe.findOne({ email });
       if (emailExists) {
         return res.status(400).json({ msg: 'You are already subscribed' });

@@ -28,15 +28,15 @@ const Invest = () => {
             </h1>
           </div>
           <div className="flex items-center justify-center mt-3">
-            <p className=" p_text text-font_sm   w-96 text-center">
+            {/* <p className=" p_text text-font_sm   w-96 text-center">
               Lorem ipsum is common placeholder text used to demonstrate the
               graphic elements of a document or visual.
-            </p>
+            </p> */}
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2  items-center mt-8">
             {/* fist row */}
-            <div className=" block">
+            <div className=" block ">
               <img src={inv1} alt="" />
             </div>
             <div className=" flex items-start flex-col">
@@ -50,7 +50,7 @@ const Invest = () => {
                 Less Upfront Capital
               </h4>
               <p className="  text-font_sm n_text    w-96 text-start pt-2">
-                With the fractional ownership opportunity investors need lesser
+                With our fractional ownership opportunity, investors need lesser
                 upfront capital to own a property. With our short term
                 time-to-own 0% interest mortgage, investors have a time to come
                 up with capital without having to secure high interest rate
@@ -77,13 +77,13 @@ const Invest = () => {
               </p>
             </div>
             <OnDesktop>
-              <div>
+              <div className="mt-6">
                 <img src={inv2} alt="" />
               </div>
             </OnDesktop>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2  margin_top items-center">
-            <div>
+            <div className="mt-6">
               <img src={inv3} alt="" />
             </div>
             <div className="flex items-start flex-col">
@@ -98,14 +98,13 @@ const Invest = () => {
               </h4>
               <p className="  text-font_sm n_text  w-96 text-start pt-2">
                 Every investment asset goes through our 5 point asset check
-                whichincludes a KYC/KYB, physical validation, market comp,
-                valuation, and legal verification. We help you avoid paying
-                unnecessary fees to agents and different parties just to get a
-                valuable asset.
+                which includes a KYC/KYB, physical validation, market comp,
+                valuation, and legal verification. Getting a valuable asset with
+                VestAfrik shouldn't come with unncessary fees.
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2  margin_top items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2  margin_top items-center ">
             <div className="flex items-start lg:pl-32 justify-center flex-col">
               <div className="flex items-center gap-1 text-sr p-text">
                 <div className="w-12 h-1">
@@ -123,13 +122,13 @@ const Invest = () => {
                 be rest assured that you are not walking this journey alone.
               </p>
             </div>
-            <div>
+            <div className="mt-6">
               <img src={inv4} alt="" />
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2  margin_top items-center">
             <OnDesktop>
-              <div>
+              <div className="mt-6">
                 <img src={inv5} alt="" />
               </div>
             </OnDesktop>
@@ -145,8 +144,8 @@ const Invest = () => {
                 Become an Educated Investor
               </h4>
               <p className="  text-font_sm n_text   w-96 text-start pt-2">
-                Wether you a pro real estate investor or ttis is going to be
-                your first time investing into real estate, we have designed
+                Wether you a pro real estate investor or this is going to be
+                your first time investing in real estate, we have designed
                 resources that will help you regardless of your level of
                 experience, for FREE. We also have frequent educative webinars,
                 events, and information session that will help you stay informed

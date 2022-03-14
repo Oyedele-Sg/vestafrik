@@ -13,8 +13,8 @@ const GetStarted = () => {
           </h1>
           <div className="flex items-center justify-center mt-3">
             <p className="  text-font_sm p_text  w-96 text-center">
-              Lorem ipsum is common placeholder text used to demonstrate the
-              graphic elements of a document or visual.
+              Our goal is to get to know you and help you get started with your
+              investment as fast as possible.
             </p>
           </div>
           <div className=" hidden lg:grid grid-cols-3 gap-24 mt-8 ">

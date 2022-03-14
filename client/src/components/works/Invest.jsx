@@ -22,7 +22,7 @@ const Invest = () => {
                 OUR ASSETS
               </div>
               <h4 className="i_text font-bold text-font pt-2">
-                Invest a build a portfolio of only quality assets.
+                Build a portfolio of only quality assets.
               </h4>
               <p className=" p_text text-font_sm  w-96 text-start pt-2">
                 Our assets are all high income yielding. We conduct our due
@@ -43,7 +43,7 @@ const Invest = () => {
                 OUR MODEL
               </div>
               <h4 className="i_text  text-font pt-2">
-                Earn more spending less with more options and less fees.
+                Earn more, spending less
               </h4>
               <p className="  text-font_sm p_text  w-96 text-start pt-2">
                 VestAfrik is designed for every investors of all income levels,
@@ -74,13 +74,16 @@ const Invest = () => {
               </h4>
               <p className="  text-font_sm p_text  w-96 text-start pt-2">
                 Once you create an account and get approved, you have access to
-                a plethora of investment opportunities. Simple filter investment
+                a plethora of investment opportunities. Simply filter investment
                 opportunity based on your desire and preferences such as
-                locations, price range, property type and many more. After
+                locations, price range, property type and many more.
+                {/* After
                 finding the right opportunity, you can either make an offer or
                 invite friends ir join our community of investors and fund your
-                investment. Sit back and watch your portfolio grow as you get
-                updates on your investment yield.
+                investment. */}
+                With a signle click, you can sit back and watch your portfolio
+                grow as you get all legal documents and updates on your
+                investment yield in your investor's portal.
               </p>
             </div>
           </div>

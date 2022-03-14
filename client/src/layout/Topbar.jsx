@@ -51,7 +51,7 @@ const Topbar = () => {
                   >
                     Our Process
                   </Link>
-                  <Link
+                  {/* <Link
                     to="/resources"
                     onClick={() => setActive(4)}
                     className={
@@ -61,7 +61,7 @@ const Topbar = () => {
                     }
                   >
                     Resources
-                  </Link>
+                  </Link> */}
                   <Link
                     to="/contact"
                     onClick={() => setActive(5)}
@@ -162,7 +162,7 @@ const Topbar = () => {
                 >
                   Our Process
                 </Link>
-                <Link
+                {/* <Link
                   to="/resources"
                   onClick={() => {
                     setActive(4);
@@ -175,7 +175,7 @@ const Topbar = () => {
                   }
                 >
                   Resources
-                </Link>
+                </Link> */}
                 <Link
                   to="/contact"
                   onClick={() => {

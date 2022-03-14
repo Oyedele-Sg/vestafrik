@@ -15,10 +15,10 @@ const Playground = () => {
             </div>
             <p className="p_text text-font_sm w-2/3">
               Gone are the days where only individuals and cooperations at the
-              top of the income chain can invest in Real Estate. With VestAfrik,
-              you have access to real estate investment opportunities within
-              your budget. Real estate has been considered to be one of the most
-              reliable and ever-appreciating asset class and now, it is
+              top of the income chain could invest in Real Estate. With
+              VestAfrik, you have access to real estate investment opportunities
+              within your budget. Real estate has been considered to be one of
+              the most reliable and ever-appreciating asset class and now, it is
               available to you right on your device.
             </p>
           </div>
@@ -29,10 +29,10 @@ const Playground = () => {
 
             <p className="p_text text-font_sm pt-3">
               Gone are the days where only individuals and cooperations at the
-              top of the income chain can invest in Real Estate. With VestAfrik,
-              you have access to real estate investment opportunities within
-              your budget. Real estate has been considered to be one of the most
-              reliable and ever-appreciating asset class and now, it is
+              top of the income chain could invest in Real Estate. With
+              VestAfrik, you have access to real estate investment opportunities
+              within your budget. Real estate has been considered to be one of
+              the most reliable and ever-appreciating asset class and now, it is
               available to you right on your device.
             </p>
           </div>
@@ -41,8 +41,8 @@ const Playground = () => {
           </div>
           <div className="w-full  items-center justify-between hidden lg:flex my-8">
             <p style={{ width: '490px' }} className=" p_text text-font_sm">
-              Moreover, Africa is our fatherland right? So we should have piece
-              ofownership of the actual land.
+              Moreover, Nigeria is our fatherland right? So we should have piece
+              of the ownership of the actual land.
             </p>
             <Link to="/works">
               <button className="bg-pr button_padding rounded-md flex items-center gap-2 text-white text-sm hover:bg-green-800">
@@ -52,8 +52,8 @@ const Playground = () => {
           </div>
           <div className="w-full  items-center flex-col justify-center gap-2 flex lg:hidden my-8">
             <p className=" text-sm text-font_sm">
-              Moreover, Africa is our fatherland right? So we should have piece
-              ofownership of the actual land.
+              Moreover, Nigeria is our fatherland right? So we should have piece
+              of the ownership of the actual land.
             </p>
             <Link to="/works">
               <button className="bg-pr w-80 flex items-center justify-center button_padding rounded-md  gap-2 text-white text-sm hover:bg-green-800">

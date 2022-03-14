@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { GoMail } from 'react-icons/go';
+import api from '../../utils/api';
 const Opportunities = () => {
+  const [email, setEmail] = useState('');
+  const emailSubscribe = async (e) => {
+    e.preventDefault();
+    const emailData = { email };
+    try {
+      const res = await api.post('/subscribe', emailData);
+    } catch (err) {
+      console.log(err);
+    }
+    setEmail('');
+  };
+
   return (
     <div
       className=" w-full relative mt-16 lg:mt-0"
@@ -33,9 +46,14 @@ const Opportunities = () => {
                     className="px-2 py-1"
                     style={{ width: '270px' }}
                     placeholder="Enter your email address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </p>
-                <button className="bg-pr font-bold px-4 py-2 rounded-md flex items-center gap-2 text-white text-sm hover:bg-green-800">
+                <button
+                  className="bg-pr font-bold px-4 py-2 rounded-md flex items-center gap-2 text-white text-sm hover:bg-green-800"
+                  onClick={emailSubscribe}
+                >
                   Subscribe
                 </button>
               </div>
@@ -46,9 +64,14 @@ const Opportunities = () => {
                     type="text"
                     className=" text-lg w-96"
                     placeholder="Enter your email address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </p>
-                <button className="bg-pr w-full font-bold px-4 py-4 rounded-md flex items-center justify-center gap-2 text-white text-sm hover:bg-green-800">
+                <button
+                  className="bg-pr w-full font-bold px-4 py-4 rounded-md flex items-center justify-center gap-2 text-white text-sm hover:bg-green-800"
+                  onClick={emailSubscribe}
+                >
                   Subscribe
                 </button>
               </div>

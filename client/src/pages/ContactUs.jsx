@@ -1,10 +1,40 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import api from '../utils/api';
 const ContactUs = ({ setGetlocation }) => {
   const location = useLocation();
-  React.useEffect(() => {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  useEffect(() => {
     setGetlocation(location.pathname);
   }, []);
+
+  const sendMessage = (e) => {
+    e.preventDefault();
+    const contactData = {
+      firstName,
+      lastName,
+      email,
+      message,
+    };
+    const resp = sendContact(contactData);
+    setFirstName('');
+    setLastName('');
+    setEmail('');
+    setMessage('');
+  };
+
+  const sendContact = async (contactData) => {
+    try {
+      const res = await api.post('/contact', contactData);
+      return res;
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <>
       <div className=" w-full bg-Contact h-96 ">
@@ -12,18 +42,18 @@ const ContactUs = ({ setGetlocation }) => {
           <div className="container ">
             <div className="flex items-center justify-center pt-8 lg:pt-16 flex-col">
               <h1 className=" text-3xl lg:text-5xl w-full text-center text-white font-bold">
-                Contact our investment Team
+                You've got a question?
               </h1>
               <p className=" text-sm text-white text-center w-full lg:w-1/3 pt-2">
-                For help with your account or any other questions you have,
-                visit our Help Center or use the form below.
+                For help with your account, investment, opportunities or
+                ANYTHING, we've got you covered. We mean it; ANYTHING.
               </p>
             </div>
           </div>
         </div>
       </div>
       <div
-        style={{ marginTop: "-180px" }}
+        style={{ marginTop: '-180px' }}
         className=" w-full flex items-center justify-center mb-32"
       >
         <div className=" w-full mx-3 lg:mx-0 lg:w-2/3 bg-white shadow-md p-8 lg:p-16">
@@ -35,17 +65,32 @@ const ContactUs = ({ setGetlocation }) => {
               <p className=" text-xs font-bold text-font">
                 First Name <span className=" text-red-500">*</span>
               </p>
-              <input type="text" className=" border px-4 h-10 bg-gray-100" />
+              <input
+                type="text"
+                className=" border px-4 h-10 bg-gray-100"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+              />
             </div>
             <div className=" flex flex-col gap-2">
               <p className=" text-xs font-bold text-font">
                 Last Name <span className=" text-red-500">*</span>
               </p>
-              <input type="text" className=" border px-4 h-10 bg-gray-100" />
+              <input
+                type="text"
+                className=" border px-4 h-10 bg-gray-100"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+              />
             </div>
             <div className=" flex flex-col gap-2 lg:col-span-2">
               <p className=" text-xs font-bold text-font">Email Address </p>
-              <input type="email" className=" border px-4 h-10 bg-gray-100" />
+              <input
+                type="email"
+                className=" border px-4 h-10 bg-gray-100"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
             <div className=" flex flex-col gap-2 lg:col-span-2">
               <p className=" text-xs font-bold text-font">
@@ -55,10 +100,15 @@ const ContactUs = ({ setGetlocation }) => {
                 className=" border px-4 h-40 bg-gray-100"
                 cols="30"
                 rows="10"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
             </div>
             <div className=" lg:col-span-2 flex items-center justify-center mt-4">
-              <button className=" px-5 py-2 red_btn hover:bg-red-700 rounded-sm text-sm">
+              <button
+                className=" px-5 py-2 red_btn hover:bg-red-700 rounded-sm text-sm"
+                onClick={sendMessage}
+              >
                 Send Message
               </button>
             </div>
