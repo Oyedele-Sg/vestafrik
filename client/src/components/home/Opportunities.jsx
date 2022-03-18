@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { GoMail } from 'react-icons/go';
 import api from '../../utils/api';
 const Opportunities = () => {
@@ -8,10 +8,14 @@ const Opportunities = () => {
     const emailData = { email };
     try {
       const res = await api.post('/subscribe', emailData);
+      const data = res.data;
+      if (data.success) {
+        alert(data.msg);
+      }
+      setEmail('');
     } catch (err) {
       console.log(err);
     }
-    setEmail('');
   };
 
   return (

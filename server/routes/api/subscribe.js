@@ -53,7 +53,9 @@ router.post(
       const { email } = req.body;
       const emailExists = await Subscribe.findOne({ email });
       if (emailExists) {
-        return res.status(400).json({ msg: 'You are already subscribed' });
+        return res
+          .status(200)
+          .json({ msg: 'You are already subscribed', success: true });
       }
 
       const subscriber = new Subscribe({
@@ -67,6 +69,9 @@ router.post(
           html: `<h1> Welcome to VestAfrik</h1><br/> <p> You have successfully subscribed to our mailing list. </p>`,
         });
       });
+      return res
+        .status(201)
+        .json({ msg: 'You are successfully subscribed!', success: true });
     } catch (err) {
       console.error(err.message);
       return res.status(500).send('Server Error');

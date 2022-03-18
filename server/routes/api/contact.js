@@ -69,6 +69,9 @@ router.post(
           html: `<h1> We got your message</h1><br/> <p> Hi ${contact.firstName}, </p><p> We got your message and we will contact you within 1-3 bussiness days. </p>`,
         });
       });
+      return res
+        .status(201)
+        .json({ msg: 'Message sent successfully!', success: true });
     } catch (err) {
       console.error(err.message);
       return res.status(500).send('Server Error');
