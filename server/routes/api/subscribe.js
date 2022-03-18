@@ -1,19 +1,19 @@
+require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const auth = require('../../middleware/auth');
 const { check, validationResult } = require('express-validator');
-const config = require('config');
 
 const Profile = require('../../models/Profile');
 const Subscribe = require('../../models/Subscribe');
 
 const nodemailer = require('nodemailer');
 const sendgridTransport = require('nodemailer-sendgrid-transport');
-
+const { SEND_GRID_KEY } = process.env;
 const transporter = nodemailer.createTransport(
   sendgridTransport({
     auth: {
-      api_key: config.get('SEND_GRID_KEY'),
+      api_key: SEND_GRID_KEY,
     },
   })
 );

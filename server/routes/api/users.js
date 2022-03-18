@@ -1,22 +1,23 @@
+require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const config = require('config');
 const auth = require('../../middleware/auth');
 const { check, validationResult } = require('express-validator');
-
 const nodemailer = require('nodemailer');
 const sendgridTransport = require('nodemailer-sendgrid-transport');
 
 const User = require('../../models/User');
 const Profile = require('../../models/Profile');
 
+const { SEND_GRID_KEY, JWTSECRET } = process.env;
+
 const transporter = nodemailer.createTransport(
   sendgridTransport({
     auth: {
-      api_key: config.get('SEND_GRID_KEY'),
+      api_key: SEND_GRID_KEY,
     },
   })
 );
@@ -113,15 +114,10 @@ router.post(
         },
       };
 
-      jwt.sign(
-        payload,
-        config.get('JWTSECRET'),
-        { expiresIn: 3600 },
-        (err, token) => {
-          if (err) throw err;
-          res.json({ token });
-        }
-      );
+      jwt.sign(payload, JWTSECRET, { expiresIn: 3600 }, (err, token) => {
+        if (err) throw err;
+        res.json({ token });
+      });
     } catch (err) {
       console.error(err.message);
       res.status(500).send('Server error');

@@ -1,9 +1,11 @@
 const AWS = require('aws-sdk');
-const config = require('config');
+require('dotenv').config();
+
+const { AWS_ACCESS_ID, AWS_SEC_KEY } = process.env;
 
 const createBucket = (bucketName) => {
-  const ID = config.get('AWS_ACCESS_ID');
-  const SECRET = config.get('AWS_SEC_KEY');
+  const ID = AWS_ACCESS_ID;
+  const SECRET = AWS_SEC_KEY;
 
   const s3 = new AWS.S3({
     accessKeyId: ID,

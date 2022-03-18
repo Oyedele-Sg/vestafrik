@@ -1,5 +1,7 @@
 const jwt = require('jsonwebtoken');
-const config = require('config');
+require('dotenv').config();
+
+const { JWTSECRET } = process.env;
 
 module.exports = function (req, res, next) {
   // Get token from header
@@ -12,7 +14,7 @@ module.exports = function (req, res, next) {
 
   // Verify token
   try {
-    jwt.verify(token, config.get('JWTSECRET'), (error, decoded) => {
+    jwt.verify(token, JWTSECRET, (error, decoded) => {
       if (error) {
         console.log(error);
         return res.status(401).json({ msg: 'Token is not valid' });
