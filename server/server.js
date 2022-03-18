@@ -22,4 +22,8 @@ app.use('/api/subscribe', require('./routes/api/subscribe'));
 
 const PORT = process.env.PORT || 5005;
 
+app.get('/', (req, res) => {
+  res.send('Hello from Express!');
+});
+
 app.listen(PORT, () => console.log(`Server listening on ${PORT}`));
