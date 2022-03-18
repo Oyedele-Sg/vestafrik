@@ -20,14 +20,6 @@ app.use('/api/sales', require('./routes/api/sales'));
 app.use('/api/contact', require('./routes/api/contact'));
 app.use('/api/subscribe', require('./routes/api/subscribe'));
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
-}
-
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5005;
 
 app.listen(PORT, () => console.log(`Server listening on ${PORT}`));

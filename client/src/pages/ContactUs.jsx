@@ -12,7 +12,7 @@ const ContactUs = ({ setGetlocation }) => {
     setGetlocation(location.pathname);
   }, []);
 
-  const sendMessage = (e) => {
+  const sendMessage = async (e) => {
     e.preventDefault();
     const contactData = {
       firstName,
@@ -20,21 +20,26 @@ const ContactUs = ({ setGetlocation }) => {
       email,
       message,
     };
-    const resp = sendContact(contactData);
+
+    try {
+      const res = await api.post('/contact', contactData);
+      const data = res.data;
+      if (data.success) {
+        alert(data.msg);
+        clear();
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const clear = () => {
     setFirstName('');
     setLastName('');
     setEmail('');
     setMessage('');
   };
 
-  const sendContact = async (contactData) => {
-    try {
-      const res = await api.post('/contact', contactData);
-      return res;
-    } catch (err) {
-      console.log(err);
-    }
-  };
   return (
     <>
       <div className=" w-full bg-Contact h-96 ">
