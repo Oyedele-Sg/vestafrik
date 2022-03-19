@@ -1,15 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import GetStarted from '../components/home/GetStarted';
 import Hero from '../components/home/Hero';
 import Invest from '../components/home/Invest';
 import Playground from '../components/home/Playground';
-import { useLocation } from 'react-router-dom';
 
-const Home = ({ setGetlocation }) => {
-  const location = useLocation();
-  useEffect(() => {
-    setGetlocation(location.pathname);
-  }, []);
+const Home = () => {
   return (
     <>
       <Hero />

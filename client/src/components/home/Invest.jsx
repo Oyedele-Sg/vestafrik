@@ -14,7 +14,6 @@ const layout = layoutGenerator({
   desktop: 1024,
 });
 
-const OnMobile = layout.is('mobile');
 const OnDesktop = layout.is('desktop');
 
 const Invest = () => {

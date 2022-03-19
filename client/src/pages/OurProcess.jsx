@@ -1,16 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ship from '../assets/images/ship.png';
 import dot from '../assets/images/dot.png';
 import photo from '../assets/images/Photo.png';
 import bg from '../assets/images/BG.png';
-import { useLocation } from 'react-router-dom';
 
-const OurProcess = ({ setGetlocation }) => {
-  const location = useLocation();
-  useEffect(() => {
-    setGetlocation(location.pathname);
-  }, []);
-
+const OurProcess = () => {
   return (
     <div>
       <div

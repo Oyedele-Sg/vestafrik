@@ -1,16 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
 import api from '../utils/api';
-const ContactUs = ({ setGetlocation }) => {
-  const location = useLocation();
+const ContactUs = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    setGetlocation(location.pathname);
-  }, []);
 
   const sendMessage = async (e) => {
     e.preventDefault();

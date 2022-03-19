@@ -104,6 +104,12 @@ img {
   margin-top: -230px;
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
 @media (max-width: 768px) {
   .container {
     max-width: 720px !important;

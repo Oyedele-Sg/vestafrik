@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
 import { GoMail } from 'react-icons/go';
+import { layoutGenerator } from 'react-break';
 import api from '../../utils/api';
+
+const layout = layoutGenerator({
+  mobile: 0,
+  tablet: 768,
+  desktop: 1024,
+});
+
+const OnMobile = layout.is('mobile');
+const OnDesktop = layout.is('desktop');
+
 const Opportunities = () => {
   const [email, setEmail] = useState('');
   const emailSubscribe = async (e) => {
@@ -72,12 +83,22 @@ const Opportunities = () => {
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </p>
-                <button
-                  className="bg-pr w-full font-bold px-4 py-4 rounded-md flex items-center justify-center gap-2 text-white text-sm hover:bg-green-800"
-                  onClick={emailSubscribe}
-                >
-                  Subscribe
-                </button>
+                <OnDesktop>
+                  <button
+                    className="bg-pr w-full font-bold px-4 py-4 rounded-md flex items-center justify-center gap-2 text-white text-sm hover:bg-green-800"
+                    onClick={emailSubscribe}
+                  >
+                    Subscribe
+                  </button>
+                </OnDesktop>
+                <OnMobile>
+                  <button
+                    className="bg-pr w-full font-bold px-4 py-4 my-4 rounded-md flex items-center justify-center gap-2 text-white text-sm hover:bg-green-800"
+                    onClick={emailSubscribe}
+                  >
+                    Subscribe
+                  </button>
+                </OnMobile>
               </div>
             </div>
           </div>

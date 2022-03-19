@@ -1,6 +1,7 @@
 import React from 'react';
 import footerbg from '../assets/images/footerBg.png';
 import { FiInstagram } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import { AiOutlineTwitter, AiFillYoutube } from 'react-icons/ai';
 import vest from '../assets/images/vest.png';
 const Footer = () => {
@@ -33,86 +34,44 @@ const Footer = () => {
                 </p>
               </div>
               <div className="flex lg:hidden items-center justify-center text-white gap-4">
-                <a href="#">
+                <a href="https://www.instagram.com/vestafrik/">
                   <FiInstagram className="w-6 h-6" />
                 </a>
-                <a href="#">
+                <a href="https://twitter.com/vestafrik/">
                   <AiOutlineTwitter className="w-6 h-6" />
                 </a>
-                <a href="#">
+                <a href="https://www.youtube.com/channel/UCeZtgzPxa599nAfRyiXvjxQ">
                   <AiFillYoutube className="w-6 h-6" />
                 </a>
               </div>
               <div className=" hidden lg:grid grid-cols-3 gap-5 pt-6">
                 <div className="flex items-start gap-1 flex-col">
-                  <h4 className="text-white n_text font-bold pb-3">Product</h4>
-                  <a href="#" className=" text-gray-300 n_text">
-                    How it works
-                  </a>
-                  <a href="#" className=" text-gray-300 n_text">
+                  <h4 className="text-white n_text font-bold pb-3">
+                    Quick Links
+                  </h4>
+                  <Link to="/works" className={' text-gray-300 n_text'}>
+                    How It Works
+                  </Link>
+                  <Link to="/process" className={' text-gray-300 n_text'}>
                     Our Process
-                  </a>
-                  <a href="#" className=" text-gray-300 n_text">
-                    Real Estate
-                  </a>
-                </div>
-                <div className="flex items-start gap-1 flex-col">
-                  <h4 className="text-white font-bold pb-3">Company</h4>
-                  <a href="#" className=" text-gray-300 n_text">
-                    About Us
-                  </a>
-                  <a href="#" className=" text-gray-300 n_text">
-                    Our Process
-                  </a>
-                  <a href="#" className=" text-gray-300 n_text">
-                    Careers
-                  </a>
-                </div>
-                <div className="flex items-start gap-1 flex-col">
-                  <h4 className="text-white font-bold pb-3">Resources</h4>
-                  <a href="#" className=" text-gray-300 n_text">
-                    Help Center
-                  </a>
-                  <a href="#" className=" text-gray-300 n_text">
-                    Articles
-                  </a>
+                  </Link>
+                  <Link to="/contact" className={' text-gray-300 n_text'}>
+                    Contact Us
+                  </Link>
                 </div>
               </div>
               <div className="  flex lg:hidden items-center justify-center gap-6 divide-x-2 divide-white flex-wrap">
-                <div className="flex items-start gap-3 flex-col">
-                  <h4 className="text-white font-bold pb-3">Product</h4>
-                  <a href="#" className=" text-gray-300 text-xs">
-                    How it works
-                  </a>
-                  <a href="#" className=" text-gray-300 text-xs">
-                    Our Process
-                  </a>
-                  <a href="#" className=" text-gray-300 text-xs">
-                    Real Estate
-                  </a>
-                </div>
                 <div className="flex pl-7 items-start gap-3 flex-col">
-                  <h4 className="text-white font-bold pb-3">Company</h4>
-                  <a href="#" className=" text-gray-300 text-xs">
-                    About Us
-                  </a>
-                  <a href="#" className=" text-gray-300 text-xs">
+                  <h4 className="text-white font-bold ">Quick Links</h4>
+                  <Link to="/works" className={' text-gray-300 n_text'}>
+                    How It Works
+                  </Link>
+                  <Link to="/process" className={' text-gray-300 n_text'}>
                     Our Process
-                  </a>
-                  <a href="#" className=" text-gray-300 text-xs">
-                    Careers
-                  </a>
-                </div>
-              </div>
-              <div className="flex lg:hidden pt-3 w-full items-center justify-center">
-                <div className="flex items-start gap-3 flex-col">
-                  <h4 className="text-white font-bold pb-3">Resources</h4>
-                  <a href="#" className=" text-gray-300 text-xs">
-                    Help Center
-                  </a>
-                  <a href="#" className=" text-gray-300 text-xs">
-                    Articles
-                  </a>
+                  </Link>
+                  <Link to="/contact" className={' text-gray-300 n_text'}>
+                    Contact Us
+                  </Link>
                 </div>
               </div>
             </div>
