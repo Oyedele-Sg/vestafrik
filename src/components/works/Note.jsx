@@ -39,9 +39,10 @@ const Note = () => {
           </div>
           {active.collaps === 1 && active.iscollaps === true && (
             <p className=" pl-5 pt-1 font-thin text-gray-400 text-sm w-full lg:w-2/3">
-              Any Nigerian citizen either currently residing in Nigeria or in
-              diaspora over the age of 18 with valid id. VestAfrik is created
-              for all citizens with no discrimation of any type.{' '}
+              Anyone really, with preferrence to diasporans and businesses with
+              verifable income, source of fund, no criminal history, and other
+              basic verifications.VestAfrik is created for investors from all
+              regions, at all levels.{' '}
             </p>
           )}
         </div>
@@ -71,7 +72,7 @@ const Note = () => {
           {active.collaps === 2 && active.iscollaps === true && (
             <p className=" pl-5 pt-1 font-thin text-gray-400 text-sm w-full lg:w-2/3">
               A valid national ID (International Passport, Drivers License,
-              Voters Card) and your BVN.{' '}
+              Voters Card) and source of funds documents.{' '}
             </p>
           )}
         </div>
@@ -100,10 +101,11 @@ const Note = () => {
           </div>
           {active.collaps === 3 && active.iscollaps === true && (
             <p className=" pl-5 pt-1 font-thin text-gray-400 text-sm w-full lg:w-2/3">
-              This is a VestAfrik's effort to make owning a property affordable
-              to everyone. With our short-term time-to-own, you can pay 50% of
-              the total property cost upfront, and spread the remaining 50% over
-              an agreed period of time without an interest rate or fees.{' '}
+              This is a VestAfrik's effort to make owning a property or
+              investment shares affordable to everyone. With our short-term
+              time-to-own, you can pay 50% of the total property cost upfront,
+              and spread the remaining 50% over an agreed period of time without
+              an interest rate or fees.{' '}
             </p>
           )}
         </div>
@@ -115,7 +117,7 @@ const Note = () => {
                 style={{ background: '#414141' }}
               ></div>
               <p className=" text-font font-bold">
-                How do I search for properties?
+                How do I search for properties or opportunities?
               </p>
             </div>
             {active.iscollaps && active.collaps === 4 ? (
