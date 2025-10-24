@@ -87,7 +87,7 @@ const Footer = () => {
       >
         <div className="container">
           <div className="flex items-center justify-between text-gray-400 text-xs">
-            <p>© 2022 VestAfrik. All rights reserved</p>
+            <p>© 2025 VestAfrik. All rights reserved</p>
             <div className="flex items-center gap-4">
               <a href="https://www.instagram.com/vestafrik/">
                 <FiInstagram className="w-4 h-4" />

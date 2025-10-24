@@ -50,9 +50,9 @@ const Invest = () => {
               </h4>
               <p className="  text-font_sm n_text    w-96 text-start pt-2">
                 With our fractional ownership opportunity, investors need lesser
-                upfront capital to own a property. With our short term
-                time-to-own 0% interest mortgage, investors have a time to come
-                up with capital without having to secure high interest rate
+                upfront capital to own a property or purchase businesses. With
+                VestAfrik growth investment methods, investors have a time to
+                come up with capital without having to secure high interest rate
                 loans from banks.
               </p>
             </div>
@@ -71,8 +71,8 @@ const Invest = () => {
               <p className="  text-font_sm n_text  w-96 text-start pt-2">
                 Since you don't have to use up all your capital in a single
                 investment, you have the opportunity to diversify your
-                investment outside of a single property, location, or investment
-                strategy.
+                investment outside of a single property or business, location,
+                or investment strategy.
               </p>
             </div>
             <OnDesktop>
@@ -143,13 +143,13 @@ const Invest = () => {
                 Become an Educated Investor
               </h4>
               <p className="  text-font_sm n_text   w-96 text-start pt-2">
-                Wether you a pro real estate investor or this is going to be
-                your first time investing in real estate, we have designed
-                resources that will help you regardless of your level of
-                experience, for FREE. We also have frequent educative webinars,
-                events, and information session that will help you stay informed
-                about the latest updates and trends regarding your investments
-                and real estate.
+                Wether you a pro real estate or business investor or this is
+                going to be your first time investing in real estate or
+                businesses, we have designed resources that will help you
+                regardless of your level of experience, for FREE. We also have
+                frequent educative webinars, events, and information session
+                that will help you stay informed about the latest updates and
+                trends regarding your investments and real estate.
               </p>
             </div>
           </div>

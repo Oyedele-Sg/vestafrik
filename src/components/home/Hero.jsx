@@ -44,7 +44,7 @@ const Hero = () => {
               </div>
             </OnMobile>
             <h1 className=" h1_text font-bold text-black">
-              Real Estate Investment{' '}
+              Technology & Real Estate Investment{' '}
               <span className="text-gray-400 font-thin">has been made </span>
               Easier
             </h1>
